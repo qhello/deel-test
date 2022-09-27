@@ -124,3 +124,15 @@ When you have finished the assignment, create a github repository and send us th
   
 
 Thank you and good luck! 🙏
+
+
+
+P.S.: 
+
+Couldn't finish the last two endpoints in the 3h max time, I would have created a SQL query w/ joins & Date boundaries to determine the best clients / profession
+
+Other than that, I would have love to spend some time on the app itself to:
+
+- Add typescript
+- Add code linting & formatting (`ESlint` + `prettier`)
+- Add `beforeEach` hook on tests, to refresh the DB state
