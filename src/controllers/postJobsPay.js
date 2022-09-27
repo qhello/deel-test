@@ -56,6 +56,7 @@ export default async (req, res) => {
         await Job.update(
           {
             paid: true,
+            paymentDate: new Date(),
           },
           {
             where: {

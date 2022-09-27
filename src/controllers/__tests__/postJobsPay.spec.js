@@ -6,6 +6,10 @@ import app from "../../app.js";
 const JOB_ID = 2;
 const CLIENT_ID = 1;
 const CONTACTOR_ID = 6;
+const MOCK_DATE = new Date("2022-01-01T23:11:26.737Z");
+
+jest.useFakeTimers();
+jest.setSystemTime(MOCK_DATE);
 
 describe("postJobsPay", () => {
   it("should return ok & transfer balance", async () => {
@@ -23,20 +27,22 @@ describe("postJobsPay", () => {
       .post(`/jobs/${JOB_ID}/pay`)
       .set("profile_id", CLIENT_ID);
 
+    const updatedJob = await Job.findOne({ where: { id: JOB_ID } });
     const { balance: newClientBalance } = await Profile.findOne({
       where: { id: CLIENT_ID },
     });
     const { balance: newContractorBalance } = await Profile.findOne({
       where: { id: CONTACTOR_ID },
     });
-    const updatedJob = await Job.findOne({ where: { id: JOB_ID } });
 
     expect(res.statusCode).toEqual(200);
 
-    expect(job.paid).not.toEqual(true);
     expect(newClientBalance).toEqual(oldClientBalance - job.price);
     expect(newContractorBalance).toEqual(oldContractorBalance + job.price);
+
+    expect(job.paid).not.toEqual(true);
     expect(updatedJob.paid).toEqual(true);
+    expect(updatedJob.paymentDate).toEqual(MOCK_DATE);
   });
 
   it("should return error if job isn't found", async () => {
