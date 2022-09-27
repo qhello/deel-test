@@ -28,4 +28,13 @@ app.get("/jobs/unpaid", getProfile, controllers.getJobsUnpaid);
  */
 app.post("/jobs/:job_id/pay", getProfile, controllers.postJobsPay);
 
+/**
+ * @returns 200 OK, or error. Will attempt to deposit specified money into client's balance
+ */
+app.post(
+  "/balances/deposit/:userId",
+  getProfile,
+  controllers.postBalanceDeposit
+);
+
 module.exports = app;
