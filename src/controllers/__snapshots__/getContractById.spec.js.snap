@@ -4,11 +4,11 @@ exports[`getContractById should return contract 1`] = `
 {
   "ClientId": 1,
   "ContractorId": 5,
-  "createdAt": "2022-09-27T11:11:32.728Z",
+  "createdAt": Any<String>,
   "id": 1,
   "status": "terminated",
   "terms": "bla bla bla",
-  "updatedAt": "2022-09-27T11:11:32.728Z",
+  "updatedAt": Any<String>,
 }
 `;
 
@@ -16,10 +16,10 @@ exports[`getContractById should return contract 2`] = `
 {
   "ClientId": 1,
   "ContractorId": 5,
-  "createdAt": "2022-09-27T11:11:32.728Z",
+  "createdAt": Any<String>,
   "id": 1,
   "status": "terminated",
   "terms": "bla bla bla",
-  "updatedAt": "2022-09-27T11:11:32.728Z",
+  "updatedAt": Any<String>,
 }
 `;

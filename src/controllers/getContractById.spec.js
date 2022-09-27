@@ -6,14 +6,20 @@ describe("getContractById", () => {
     const res = await request(app).get("/contracts/1").set("profile_id", 5);
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot({
+      createdAt: expect.any(String),
+      updatedAt: expect.any(String),
+    });
   });
 
   it("should return contract", async () => {
     const res = await request(app).get("/contracts/1").set("profile_id", 1);
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot({
+      createdAt: expect.any(String),
+      updatedAt: expect.any(String),
+    });
   });
 
   it("should return 404 if contract doesn't belong to profile", async () => {

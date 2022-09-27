@@ -5,11 +5,11 @@ exports[`getContracts should return contracts 1`] = `
   {
     "ClientId": 1,
     "ContractorId": 6,
-    "createdAt": "2022-09-27T11:11:32.728Z",
+    "createdAt": Any<String>,
     "id": 2,
     "status": "in_progress",
     "terms": "bla bla bla",
-    "updatedAt": "2022-09-27T11:11:32.728Z",
+    "updatedAt": Any<String>,
   },
 ]
 `;
