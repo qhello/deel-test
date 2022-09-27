@@ -1,5 +1,7 @@
-const getContractById = require('./getContractById')
+const getContractById = require("./getContractById");
+const getContracts = require("./getContracts");
 
 module.exports = {
-    getContractById
-}
+  getContractById,
+  getContracts,
+};

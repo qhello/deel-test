@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getContracts should return contracts 1`] = `
+[
+  {
+    "ClientId": 1,
+    "ContractorId": 6,
+    "createdAt": "2022-09-27T11:11:32.728Z",
+    "id": 2,
+    "status": "in_progress",
+    "terms": "bla bla bla",
+    "updatedAt": "2022-09-27T11:11:32.728Z",
+  },
+]
+`;
