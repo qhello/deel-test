@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getBestClients should return best clients 1`] = `
+[
+  {
+    "fullName": "John Snow",
+    "id": 3,
+    "paid": 200,
+  },
+  {
+    "fullName": "Harry Potter",
+    "id": 1,
+    "paid": 200,
+  },
+]
+`;
+
+exports[`getBestClients should return best clients 2`] = `
+[
+  {
+    "fullName": "Ash Kethcum",
+    "id": 4,
+    "paid": 2020,
+  },
+  {
+    "fullName": "Mr Robot",
+    "id": 2,
+    "paid": 442,
+  },
+  {
+    "fullName": "Harry Potter",
+    "id": 1,
+    "paid": 442,
+  },
+  {
+    "fullName": "John Snow",
+    "id": 3,
+    "paid": 200,
+  },
+]
+`;

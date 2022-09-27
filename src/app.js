@@ -39,9 +39,8 @@ app.post(
   controllers.postBalanceDeposit
 );
 
-/**
- * @returns string, equals to the best progression for that time period
- */
 app.get("/admin/best-profession", controllers.getBestProfession);
+
+app.get("/admin/best-clients", controllers.getBestClients);
 
 export default app;
