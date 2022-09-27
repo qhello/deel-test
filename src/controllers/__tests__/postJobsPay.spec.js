@@ -1,7 +1,7 @@
 import { jest } from "@jest/globals";
 import request from "supertest";
 
-import app from "../app.js";
+import app from "../../app.js";
 
 const JOB_ID = 2;
 const CLIENT_ID = 1;

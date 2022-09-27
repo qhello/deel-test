@@ -1,7 +1,7 @@
 import request from "supertest";
 import { jest } from "@jest/globals";
 
-import app from "../app.js";
+import app from "../../app.js";
 
 const CLIENT_ID = 2;
 
