@@ -1,10 +1,10 @@
-const getContractById = require("./getContractById");
-const getContracts = require("./getContracts");
-const getJobsUnpaid = require("./getJobsUnpaid");
-const postJobsPay = require("./postJobsPay");
-const postBalanceDeposit = require("./postBalanceDeposit");
+import getContractById from "./getContractById.js";
+import getContracts from "./getContracts.js";
+import getJobsUnpaid from "./getJobsUnpaid.js";
+import postJobsPay from "./postJobsPay.js";
+import postBalanceDeposit from "./postBalanceDeposit.js";
 
-module.exports = {
+export default {
   getContractById,
   getContracts,
   getJobsUnpaid,

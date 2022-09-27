@@ -1,9 +1,10 @@
-const { Op } = require("sequelize");
+import { Op } from "sequelize";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const { Contract } = req.app.get("models");
   const { id } = req.params;
   const { id: profileId } = req.profile;
+
   const contract = await Contract.findOne({
     where: {
       id,

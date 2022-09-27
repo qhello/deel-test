@@ -1,5 +1,7 @@
-const request = require("supertest");
-const app = require("../app");
+import { jest } from "@jest/globals";
+import request from "supertest";
+
+import app from "../app.js";
 
 const JOB_ID = 2;
 const CLIENT_ID = 1;
@@ -38,6 +40,8 @@ describe("postJobsPay", () => {
   });
 
   it("should return error if job isn't found", async () => {
+    // Disable console.error for this test
+    jest.spyOn(console, "error").mockImplementation();
     const res = await request(app)
       .post(`/jobs/1667/pay`)
       .set("profile_id", CLIENT_ID);

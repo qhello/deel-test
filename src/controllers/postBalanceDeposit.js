@@ -1,6 +1,6 @@
-const { Transaction, Op } = require("sequelize");
+import { Transaction, Op } from "sequelize";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const sequelize = req.app.get("sequelize");
   const { Job, Contract, Profile } = req.app.get("models");
   const { userId } = req.params;
@@ -60,11 +60,6 @@ module.exports = async (req, res) => {
         });
 
         const maxAmountToBeDeposited = sumPrice * 0.25;
-
-        console.log({
-          amountToDeposit,
-          maxAmountToBeDeposited,
-        });
 
         if (amountToDeposit > maxAmountToBeDeposited) {
           throw new Error(

@@ -1,6 +1,6 @@
-const { Transaction } = require("sequelize");
+import { Transaction } from "sequelize";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const sequelize = req.app.get("sequelize");
   const { Job, Contract, Profile } = req.app.get("models");
   const { job_id } = req.params;

@@ -1,11 +1,12 @@
-const Sequelize = require("sequelize");
+import Sequelize from "sequelize";
 
-const sequelize = new Sequelize({
+export const sequelize = new Sequelize({
   dialect: "sqlite",
   storage: "./database.sqlite3",
+  logging: process.env.NODE_ENV === "test" ? false : console.log,
 });
 
-class Profile extends Sequelize.Model {}
+export class Profile extends Sequelize.Model {}
 Profile.init(
   {
     firstName: {
@@ -33,7 +34,7 @@ Profile.init(
   }
 );
 
-class Contract extends Sequelize.Model {}
+export class Contract extends Sequelize.Model {}
 Contract.init(
   {
     terms: {
@@ -50,7 +51,7 @@ Contract.init(
   }
 );
 
-class Job extends Sequelize.Model {}
+export class Job extends Sequelize.Model {}
 Job.init(
   {
     description: {
@@ -81,10 +82,3 @@ Profile.hasMany(Contract, { as: "Client", foreignKey: "ClientId" });
 Contract.belongsTo(Profile, { as: "Client" });
 Contract.hasMany(Job);
 Job.belongsTo(Contract);
-
-module.exports = {
-  sequelize,
-  Profile,
-  Contract,
-  Job,
-};

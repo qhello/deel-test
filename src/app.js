@@ -1,8 +1,10 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const { sequelize } = require("./model");
-const { getProfile } = require("./middleware/getProfile");
-const controllers = require("./controllers");
+import express from "express";
+import bodyParser from "body-parser";
+
+import { sequelize } from "./model.js";
+import { getProfile } from "./middleware/getProfile.js";
+import controllers from "./controllers/index.js";
+
 const app = express();
 app.use(bodyParser.json());
 app.set("sequelize", sequelize);
@@ -37,4 +39,4 @@ app.post(
   controllers.postBalanceDeposit
 );
 
-module.exports = app;
+export default app;
