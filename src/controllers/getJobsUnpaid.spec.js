@@ -6,6 +6,23 @@ describe("getJobsUnpaid", () => {
     const res = await request(app).get("/jobs/unpaid").set("profile_id", 2);
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toMatchSnapshot();
+    expect(res.body).toMatchSnapshot([
+      {
+        Contract: {
+          createdAt: expect.any(String),
+          updatedAt: expect.any(String),
+        },
+        createdAt: expect.any(String),
+        updatedAt: expect.any(String),
+      },
+      {
+        Contract: {
+          createdAt: expect.any(String),
+          updatedAt: expect.any(String),
+        },
+        createdAt: expect.any(String),
+        updatedAt: expect.any(String),
+      },
+    ]);
   });
 });
