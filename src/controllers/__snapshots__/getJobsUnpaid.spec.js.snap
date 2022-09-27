@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getJobsUnpaid should return jobs 1`] = `
+[
+  {
+    "Contract": {
+      "ClientId": 1,
+      "ContractorId": 6,
+      "createdAt": "2022-09-27T11:11:32.728Z",
+      "id": 2,
+      "status": "in_progress",
+      "terms": "bla bla bla",
+      "updatedAt": "2022-09-27T11:11:32.728Z",
+    },
+    "ContractId": 2,
+    "createdAt": "2022-09-27T11:11:32.728Z",
+    "description": "work",
+    "id": 2,
+    "paid": null,
+    "paymentDate": null,
+    "price": 201,
+    "updatedAt": "2022-09-27T11:11:32.728Z",
+  },
+]
+`;

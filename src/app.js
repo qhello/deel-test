@@ -18,4 +18,9 @@ app.get("/contracts/:id", getProfile, controllers.getContractById);
  */
 app.get("/contracts", getProfile, controllers.getContracts);
 
+/**
+ * @returns jobs, that are unpaid & belongs to contracts that belongs to the profile calling
+ */
+app.get("/jobs/unpaid", getProfile, controllers.getJobsUnpaid);
+
 module.exports = app;
