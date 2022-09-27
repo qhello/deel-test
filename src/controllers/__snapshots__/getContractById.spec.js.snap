@@ -11,3 +11,15 @@ exports[`getContractById should return contract 1`] = `
   "updatedAt": "2022-09-27T11:11:32.728Z",
 }
 `;
+
+exports[`getContractById should return contract 2`] = `
+{
+  "ClientId": 1,
+  "ContractorId": 5,
+  "createdAt": "2022-09-27T11:11:32.728Z",
+  "id": 1,
+  "status": "terminated",
+  "terms": "bla bla bla",
+  "updatedAt": "2022-09-27T11:11:32.728Z",
+}
+`;
