@@ -23,4 +23,9 @@ app.get("/contracts", getProfile, controllers.getContracts);
  */
 app.get("/jobs/unpaid", getProfile, controllers.getJobsUnpaid);
 
+/**
+ * @returns 200 OK, or error. Will attempt to pay an unpaid job
+ */
+app.post("/jobs/:job_id/pay", getProfile, controllers.postJobsPay);
+
 module.exports = app;
