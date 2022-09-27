@@ -3,6 +3,7 @@ import getContracts from "./getContracts.js";
 import getJobsUnpaid from "./getJobsUnpaid.js";
 import postJobsPay from "./postJobsPay.js";
 import postBalanceDeposit from "./postBalanceDeposit.js";
+import getBestProfession from "./getBestProfession.js";
 
 export default {
   getContractById,
@@ -10,4 +11,5 @@ export default {
   getJobsUnpaid,
   postJobsPay,
   postBalanceDeposit,
+  getBestProfession,
 };
